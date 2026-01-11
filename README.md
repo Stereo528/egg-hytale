@@ -42,6 +42,7 @@ The following variables can be configured:
 | `ALLOW_OP` | Do you wish to allow operators or not | `true` |
 | `AUTH_MODE` | Authentication mode (authenticated or offline) | `authenticated` |
 | `AUTOMATIC_UPDATE` | Update the hytale server automatically | `true` |
+| `JVM_ARGS` | Additional Java Virtual Machine arguments for advanced configuration. | See egg config |
 | `LEVERAGE_AHEAD_OF_TIME_CACHE` | The server ships with a pre-trained AOT cache (HytaleServer.aot) that improves boot times by skipping JIT warmup | `true` |
 | `DISABLE_SENTRY` | Disable Sentry during active plugin development. Hytale uses Sentry to track crashes. Disable it to avoid submitting your development errors | `true` |
 | `ENABLE_BACKUPS` | Enable automatic backups | `false` |

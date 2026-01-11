@@ -44,7 +44,12 @@ fi
 
 # Add max memory if set and greater than 0
 if [ -n "${SERVER_MEMORY}" ] && [ "${SERVER_MEMORY}" -gt 0 ] 2>/dev/null; then
-    JAVA_CMD="${JAVA_CMD} -Xmx${SERVER_MEMORY}M"
+    JAVA_CMD="${JAVA_CMD} -Xms${SERVER_MEMORY}M -Xmx${SERVER_MEMORY}M"
+fi
+
+# Add JVM arguments if set
+if [ -n "${JVM_ARGS}" ]; then
+    JAVA_CMD="${JAVA_CMD} ${JVM_ARGS}"
 fi
 
 JAVA_CMD="${JAVA_CMD} -jar HytaleServer.jar"
